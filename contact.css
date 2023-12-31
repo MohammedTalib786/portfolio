@@ -1,0 +1,318 @@
+:root {
+    font-size: 16px;
+    /* --prim-clr: #062eff; */
+    /* before */
+    --prim-clr: #1e42ff;
+    /* --nav-clr: #f9f9f9; */
+    --nav-clr: #FFF6F6;
+    --contact-bg: #E6E6E6;
+    --half-white: #FFFFEC;
+    --grey-clr: grey;
+    --black-clr: black;
+    --white-clr: white;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.myDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
+    /* background-color: var(--white-clr); */
+    background-color: var(--half-white);
+    padding: 3rem 5rem;
+    row-gap: 3rem;
+}
+
+.headText {
+    font-family: Outfit;
+    font-size: 3rem;
+}
+
+.texts {
+    font-family: 'Open Sans';
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.Sicons {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-weight: 700;
+}
+
+.Sicons a {
+    font-size: 1.8rem;
+    color: var(--grey-clr);
+    cursor: pointer;
+    transition: all .6s;
+}
+
+.Sicons a:not(a:first-child) {
+    margin-left: 1.5rem;
+}
+
+.Sicons a:hover {
+    color: var(--prim-clr);
+}
+
+.form {
+    /* background-color: blue; */
+    /* background-color: var(--half-white); */
+    background-color: var(--white-clr);
+    padding: 3rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5rem;
+}
+
+.mainForm {
+    /* width: 50%; */
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.mainForm input,
+.mainForm textarea {
+    background-color: var(--contact-bg);
+    width: 40rem;
+    height: 3rem;
+    outline: 0;
+    border: 0;
+    border-radius: 18px;
+    padding-left: 2rem;
+    font-family: 'Open Sans';
+    font-size: 1.05rem;
+}
+
+.mainForm textarea {
+    padding: 1rem 0rem 0rem 2rem;
+    height: 7rem;
+}
+
+.mainForm input:focus,
+.mainForm textarea:focus {
+    box-shadow: 1px 1px 10px 0px #062effcc;
+}
+
+
+#btn {
+    width: 100%;
+    height: 2.5rem;
+    background: var(--prim-clr);
+    color: var(--white-clr);
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    font-family: outfit;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: border-radius .6s;
+}
+
+#btn:hover {
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Media Queries ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~ tablets and big screens ~~~~~~~~~~~~~~~~~ */
+
+
+@media only screen and (min-width: 596px)and (max-width: 767px) {
+    /* body {
+        background-color: magenta;
+    } */
+
+    .myDetails {
+        padding: 3rem 2rem;
+    }
+
+    .headText {
+        font-size: 2rem;
+    }
+
+    .texts {
+        font-size: 1rem;
+    }
+
+    .Sicons i {
+        font-size: 1.4rem;
+    }
+
+    .form {
+        padding: 3rem 2rem;
+    }
+
+    .mainForm input,
+    .mainForm textarea {
+        width: 30rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 426px)and (max-width: 595px) {
+    /* body {
+        background-color: magenta;
+    } */
+
+    .myDetails {
+        padding: 3rem 2rem;
+    }
+
+    .headText {
+        font-size: 1.7rem;
+    }
+
+    .texts {
+        font-size: 1rem;
+    }
+
+    .Sicons i {
+        font-size: 1.4rem;
+    }
+
+    .form {
+        padding: 3rem 2rem;
+    }
+
+    .mainForm input,
+    .mainForm textarea {
+        width: 24rem;
+        height: 2.5rem;
+        padding-left: 1rem;
+        border-radius: 11px;
+        font-size: .8rem;
+    }
+
+    .mainForm textarea {
+        padding: 1rem 0rem 0rem 1rem;
+        height: 7rem;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+    /* body {
+        background-color: magenta;
+    } */
+
+    .myDetails {
+        padding: 3rem 1rem;
+    }
+
+    .headText {
+        font-size: 1.5rem;
+    }
+
+    .texts {
+        font-size: .9rem;
+    }
+
+    .Sicons i {
+        font-size: 1.4rem;
+    }
+
+    .form {
+        padding: 3rem 1rem;
+    }
+
+    .mainForm input,
+    .mainForm textarea {
+        width: 19rem;
+        height: 2.2rem;
+        padding-left: 1rem;
+        border-radius: 11px;
+        font-size: .8rem;
+    }
+
+    .mainForm textarea {
+        padding: 1rem 0rem 0rem 1rem;
+        height: 7rem;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    /* body {
+        background-color: magenta;
+    } */
+
+    .myDetails {
+        padding: 3rem 1rem;
+    }
+
+    .headText {
+        font-size: 1.3rem;
+    }
+
+    .texts {
+        font-size: .8rem;
+    }
+
+    .Sicons i {
+        font-size: 1.2rem;
+    }
+
+    .form {
+        padding: 3rem 1rem;
+    }
+
+    .mainForm input,
+    .mainForm textarea {
+        width: 17rem;
+        height: 2rem;
+        padding-left: 1rem;
+        border-radius: 11px;
+        font-size: .8rem;
+    }
+
+    .mainForm textarea {
+        padding: 1rem 0rem 0rem 1rem;
+        height: 7rem;
+    }
+}

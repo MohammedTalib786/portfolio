@@ -1,0 +1,938 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Open+Sans:wght@400;500;600;700;800&family=Orbitron:wght@400;500&family=Outfit:wght@200;400;700&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@200;300;400;500;600&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,800;0,900;1,700&family=Roboto:wght@300;500;700&display=swap');
+
+:root {
+    font-size: 16px;
+    /* --prim-clr: #062eff; */
+    /* before */
+    --prim-clr: #1e42ff;
+    /* --nav-clr: #f9f9f9; */
+    --nav-clr: #FFF6F6;
+    --half-white: #FFFFEC;
+    --selection-clr: #ff6161;
+    --grey-clr: grey;
+    --black-clr: black;
+    --white-clr: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+::selection {
+    background-color: var(--selection-clr);
+    color: var(--white-clr);
+}
+
+
+/* ------------------- Scroll Bar ------------------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /* background: #888; */
+    background: var(--prim-clr);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--prim-clr);
+}
+
+
+/* ---------------------- Header ---------------------- */
+
+header {
+    padding: 0rem 5rem;
+    width: 100%;
+    height: 6rem;
+    background-color: var(--nav-clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: raleway;
+    font-size: 2rem;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: var(--prim-clr);
+}
+
+header nav {
+    display: flex;
+    column-gap: 6rem;
+}
+
+nav li {
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    cursor: pointer;
+}
+
+nav li a {
+    color: var(--black-clr);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: var(--prim-clr);
+}
+
+nav li a:active {
+    color: var(--prim-clr);
+}
+
+
+
+/* ---------------------- Hero Section ---------------------- */
+
+.heroSection {
+    width: 100%;
+    height: 34rem;
+    /* background-color: pink; */
+    padding: 0rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left {
+    width: 50%;
+    height: 32rem;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 1.4rem;
+}
+
+.name {
+    font-size: 2.6rem;
+    font-family: Outfit;
+    text-transform: uppercase;
+}
+
+.role {
+    font-size: 2rem;
+    font-family: Poppins;
+    color: var(--prim-clr);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    font-size: 1.8rem;
+    color: var(--grey-clr);
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.icons a:not(a:first-child) {
+    margin-left: 1.5rem;
+}
+
+.icons a:hover {
+    color: var(--prim-clr);
+}
+
+.downloadBtn {
+    padding: 0.89rem 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    font-family: open sans;
+    font-size: 1.01rem;
+    background-color: var(--prim-clr);
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-radius .6s;
+}
+
+.downloadBtn a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.downloadBtn:hover {
+    border-radius: 35px;
+}
+
+.right {
+    width: 50%;
+    height: 32rem;
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right img {
+    width: 29rem;
+}
+
+.h2Head {
+    font-family: Outfit;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+
+
+/* ---------------------- About Us ---------------------- */
+
+.about {
+    background-color: var(--half-white);
+    display: flex;
+    row-gap: 6rem;
+    align-items: center;
+    flex-direction: column;
+    padding: 3.2rem 5rem;
+}
+
+.aboutText {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    line-height: 2.6rem;
+    font-size: 1.23rem;
+}
+
+.aboutText p:first-child {
+    text-align: center;
+}
+
+.aboutText p:last-child {
+    text-align: justify;
+}
+
+
+/* ---------------------- Skills ---------------------- */
+
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem 5rem;
+    background: var(--white-clr);
+}
+
+.boxContainer {
+    width: 100%;
+    padding: 3rem 0rem;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.boxes {
+    width: 30%;
+    height: 10rem;
+    background-color: var(--white-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    border-radius: 16px;
+    /* border-bottom: 3px solid #5959ff; */
+    box-shadow: 1px 1px 18px 0px #949494;
+    transition: transform .4s;
+}
+
+.boxes:hover {
+    transform: scale(1.03);
+}
+
+.boxes:nth-child(1) {
+    border-bottom: 3px solid #EE6628;
+}
+
+.boxes:nth-child(2) {
+    border-bottom: 3px solid #208DB8;
+}
+
+.boxes:nth-child(3) {
+    border-bottom: 3px solid #ffe437;
+}
+
+.boxes:nth-child(4) {
+    border-bottom: 3px solid #31A8FF;
+}
+
+.boxes:nth-child(5) {
+    border-bottom: 3px solid #2E2E38;
+}
+
+.boxes:nth-child(6) {
+    border-bottom: 3px solid #7411F7;
+}
+
+.boxes:nth-child(7) {
+    border-bottom: 3px solid #07B6D5;
+}
+
+.boxes:nth-child(8) {
+    border-bottom: 3px solid #71A962;
+}
+
+.boxes:nth-child(9) {
+    border-bottom: 3px solid black;
+}
+
+.boxes:nth-child(10) {
+    border-bottom: 3px solid #10AA50;
+}
+
+.boxes:nth-child(11) {
+    border-bottom: 3px solid #880000;
+}
+
+.boxes:nth-child(12) {
+    border-bottom: 3px solid #4AA6F0;
+}
+
+.boxes:nth-child(13) {
+    border-bottom: 3px solid #F05033;
+}
+
+.boxes:nth-child(14) {
+    border-bottom: 3px solid #000000;
+}
+
+.boxes:nth-child(15) {
+    border-bottom: 3px solid #21759B;
+}
+
+.boxes img {
+    width: 7rem;
+}
+
+.boxes span {
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: context-menu;
+}
+
+
+/* ---------------------- Footer ---------------------- */
+
+footer {
+    width: 100%;
+    height: 6rem;
+    background-color: var(--nav-clr);
+    /* background-color: rgb(255, 96, 96); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.copyrights span {
+    font-family: 'open sans';
+    font-size: 1rem;
+}
+
+.footerLogo h2 {
+    font-family: raleway;
+    font-size: 2rem;
+    cursor: context-menu;
+}
+
+.footerLogo h2 a {
+    text-decoration: none;
+    color: var(--prim-clr);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.socials a {
+    font-size: 1.8rem;
+    color: var(--grey-clr);
+    cursor: pointer;
+    transition: all .6s;
+}
+
+.socials a:not(a:first-child) {
+    margin-left: 2.7rem;
+}
+
+.socials a:hover {
+    color: var(--prim-clr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Media Queries ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~ tablets and big screens ~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 1025px)and (max-width: 1250px) {
+    /* body {
+        background-color: magenta;
+    } */
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .right img {
+        width: 23rem;
+    }
+
+    .boxContainer {
+        gap: 2rem;
+    }
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~ tablets and big screens ~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 768px)and (max-width: 1024px) {
+    /* body {
+        background-color: cyan;
+    } */
+
+    header {
+        padding: 0rem 3rem;
+    }
+
+    .heroSection {
+        padding: 0rem 3rem;
+    }
+
+    .name {
+        font-size: 1.6rem;
+    }
+
+    .role {
+        font-size: 1.5rem;
+    }
+
+    .downloadBtn {
+        padding: 0.8rem 2.2rem;
+    }
+
+    .right img {
+        width: 19rem;
+    }
+
+    .h2Head {
+        font-size: 2rem;
+    }
+
+    .about {
+        row-gap: 4rem;
+        padding: 3.2rem 3rem;
+    }
+
+    .skills {
+        padding: 3rem 3rem;
+    }
+
+    .boxContainer {
+        gap: 2rem;
+    }
+
+    .boxes {
+        height: 8rem;
+    }
+
+    .boxes img {
+        width: 4.5rem;
+    }
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~ large level mobile devices ~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 596px)and (max-width: 767px) {
+    /* body {
+        background-color: green;
+    } */
+
+    header {
+        padding: 0rem 2rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        column-gap: 3rem;
+    }
+
+    .heroSection {
+        padding: 0rem 2rem;
+        height: 28rem;
+    }
+
+    .left {
+        height: 28rem;
+    }
+
+    .name {
+        font-size: 1.27rem;
+    }
+
+    .role {
+        font-size: 1.3rem;
+    }
+
+    .icons i {
+        font-size: 1.5rem;
+    }
+
+    .downloadBtn {
+        padding: 0.7rem 1.5rem;
+    }
+
+    .right {
+        height: 28rem;
+    }
+
+    .right img {
+        width: 15rem;
+    }
+
+    .h2Head {
+        font-size: 2rem;
+    }
+
+    .about {
+        row-gap: 4rem;
+        padding: 3.2rem 2rem;
+    }
+
+    .skills {
+        padding: 3rem 2rem;
+    }
+
+    .boxContainer {
+        gap: 1.6rem;
+    }
+
+    .boxes {
+        width: 43%;
+        height: 8rem;
+    }
+
+    .boxes img {
+        width: 4.5rem;
+    }
+
+    .copyrights span {
+        font-size: .8rem;
+    }
+
+    .footerLogo h2 {
+        font-size: 1.5rem;
+    }
+
+    .socials i {
+        font-size: 1.3rem;
+    }
+
+    .socials i:not(i:first-child) {
+        margin-left: 1.8rem;
+    }
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~ medium level mobile devices ~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 426px)and (max-width: 595px) {
+    /* body {
+        background-color: green;
+    } */
+
+    header {
+        padding: 0;
+        height: 18rem;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        row-gap: 1.6rem;
+    }
+
+    .heroSection {
+        padding: 0rem 1rem;
+        height: 34rem;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .left {
+        width: 80%;
+        height: 34rem;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .role {
+        font-size: 1.4rem;
+    }
+
+    .icons i {
+        font-size: 1.5rem;
+    }
+
+    .downloadBtn {
+        padding: 0.8rem 1.2rem;
+        font-size: .89rem;
+    }
+
+    .right {
+        width: 80%;
+        height: 34rem;
+        justify-content: center;
+    }
+
+    .right img {
+        width: 15rem;
+    }
+
+    .h2Head {
+        font-size: 2rem;
+    }
+
+    .about {
+        row-gap: 4rem;
+        padding: 3.2rem 2rem;
+    }
+
+    .aboutText {
+        line-height: 2.2rem;
+        font-size: 1.15rem;
+    }
+
+    .skills {
+        padding: 3rem 1rem;
+    }
+
+    .boxContainer {
+        gap: 1.6rem;
+    }
+
+    .boxes {
+        width: 43%;
+        height: 7rem;
+    }
+
+    .boxes img {
+        width: 3.5rem;
+    }
+
+    footer {
+        height: 14rem;
+        flex-direction: column;
+
+    }
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~ small level mobile devices ~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+    /* body {
+        background-color: blueviolet;
+    } */
+
+    header {
+        padding: 0;
+        height: 18rem;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        row-gap: 1.6rem;
+    }
+
+    .heroSection {
+        padding: 0rem .5rem;
+        height: 34rem;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .left {
+        width: 80%;
+        height: 34rem;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 1.15rem;
+    }
+
+    .role {
+        font-size: 1.05rem;
+    }
+
+    .icons i {
+        font-size: 1.3rem;
+    }
+
+    .icons i:not(i:first-child) {
+        margin-left: 1rem;
+    }
+
+    .downloadBtn {
+        padding: 0.6rem 1.1rem;
+        font-size: .6rem;
+    }
+
+    .right {
+        width: 80%;
+        height: 34rem;
+        justify-content: center;
+    }
+
+    .right img {
+        width: 13rem;
+    }
+
+    .h2Head {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        row-gap: 4rem;
+        padding: 3.2rem 1.5rem;
+    }
+
+    .aboutText {
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+
+    .skills {
+        padding: 3rem .5rem;
+    }
+
+    .boxContainer {
+        gap: 1.1rem;
+    }
+
+    .boxes {
+        width: 65%;
+        height: 6rem;
+    }
+
+    .boxes img {
+        width: 3.5rem;
+    }
+
+    .boxes span {
+        font-size: 1rem;
+    }
+
+    footer {
+        height: 14rem;
+        flex-direction: column;
+    }
+
+    .copyrights span {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footerLogo h2 {
+        font-size: 1.5rem;
+    }
+
+    .socials i {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* ~~~~~~~~~~~~~~~~~ last ~~~~~~~~~~~~~~~~~ */
+
+@media only screen and (max-width: 320px) {
+    /* body {
+        background-color: blueviolet;
+    } */
+
+    header {
+        padding: 0;
+        height: 18rem;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        row-gap: 1.6rem;
+    }
+
+    .heroSection {
+        padding: 0rem .5rem;
+        height: 22rem;
+        height: 34rem;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .left {
+        width: 80%;
+        height: 34rem;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 1rem;
+    }
+
+    .role {
+        font-size: .8rem;
+    }
+
+    .icons i {
+        font-size: 1.2rem;
+    }
+
+    .icons i:not(i:first-child) {
+        margin-left: 1rem;
+    }
+
+    .downloadBtn {
+        padding: 0.6rem 1.1rem;
+        font-size: .6rem;
+    }
+
+    .right {
+        width: 80%;
+        height: 34rem;
+        justify-content: center;
+    }
+
+    .right img {
+        width: 13rem;
+    }
+
+    .h2Head {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        row-gap: 4rem;
+        padding: 3.2rem 1.5rem;
+    }
+
+    .aboutText {
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+
+    .skills {
+        padding: 3rem .5rem;
+    }
+
+    .boxContainer {
+        gap: 1.1rem;
+    }
+
+    .boxes {
+        width: 65%;
+        height: 6rem;
+    }
+
+    .boxes img {
+        width: 3.5rem;
+    }
+
+    .boxes span {
+        font-size: 1rem;
+    }
+
+    footer {
+        height: 14rem;
+        flex-direction: column;
+    }
+
+    .copyrights span {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .footerLogo h2 {
+        font-size: 1.5rem;
+    }
+
+    .socials i {
+        font-size: 1.3rem;
+    }
+}
