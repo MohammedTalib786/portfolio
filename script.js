@@ -1,5 +1,7 @@
+// Scroll To Top Functionality
+
 const toTop = document.querySelector('.to-top');
-console.log(toTop)
+// console.log(toTop)
 window.addEventListener('scroll', () => {
     // console.log(window.pageYOffset);
     if (window.pageYOffset > 100) {
@@ -17,26 +19,23 @@ toTop.addEventListener('click', (e) => {
 
 
 
+// Responsive Navbar Functionality
 
-
+let respHead = document.querySelector('.resp-head');
 let toggleBtn = document.querySelector('.toggleBtn');
-console.log(toggleBtn)
-let landscape = document.querySelector('.landscape');
-console.log(landscape)
-// let header = document.querySelector('header');
+let respNav = document.querySelector('.resp-nav');
+
+// console.log(respHead, toggleBtn, respNav)
+
 toggleBtn.addEventListener('click', (e) => {
-    if (landscape.style.display != "flex") {
-        landscape.style.display = "flex"
+    e.preventDefault()
+    if (respNav.style.display != 'flex') {
+        respHead.style.height = '20rem';
+        respNav.style.display = 'flex'
     }
-
     else {
-        landscape.style.display = "none"
-
+        respHead.style.height = '9rem';
+        respNav.style.display = 'none'
     }
 })
-
-if (window.innerWidth > 595) {
-    landscape.classList.add('displayActive')
-}
-
 

@@ -25,6 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     row-gap: 4rem;
+    min-height: 80vh;
 }
 
 .projSect h2 {
@@ -162,6 +163,7 @@ body {
 
     .projSect {
         padding: 3rem 2rem;
+        min-height: 80vh;
     }
 
     .projs {
@@ -185,6 +187,7 @@ body {
 
     .projSect {
         padding: 3rem 1rem;
+        min-height: 80vh;
     }
 
     .projs {
@@ -207,6 +210,7 @@ body {
 
     .projSect {
         padding: 3rem 0rem;
+        min-height: 80vh;
     }
 
     .projs {

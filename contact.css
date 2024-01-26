@@ -74,6 +74,7 @@ body {
     justify-content: center;
     align-items: center;
     row-gap: 5rem;
+    min-height: 81vh;
 }
 
 .mainForm {
@@ -131,17 +132,6 @@ body {
 #btn:hover {
     border-radius: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -216,6 +206,7 @@ body {
 
     .form {
         padding: 3rem 2rem;
+        min-height: 65vh;
     }
 
     .mainForm input,
@@ -259,6 +250,7 @@ body {
 
     .form {
         padding: 3rem 1rem;
+        min-height: 65vh;
     }
 
     .mainForm input,
@@ -300,6 +292,7 @@ body {
 
     .form {
         padding: 3rem 1rem;
+        min-height: 65vh;
     }
 
     .mainForm input,
