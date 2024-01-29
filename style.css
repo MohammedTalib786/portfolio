@@ -438,6 +438,9 @@ footer {
 }
 
 
+
+/* ---------------------- Scroll to Top Button ---------------------- */
+
 .to-top {
     width: 3.5rem;
     height: 3.5rem;
@@ -467,11 +470,6 @@ footer {
     bottom: 3rem;
     pointer-events: auto;
 }
-
-
-
-
-
 
 
 
