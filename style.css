@@ -330,15 +330,15 @@ nav li a:active,
 }
 
 .boxes:nth-child(4) {
-    border-bottom: 3px solid #31A8FF;
+    border-bottom: 3px solid #7B11F8;
 }
 
 .boxes:nth-child(5) {
-    border-bottom: 3px solid #2E2E38;
+    border-bottom: 3px solid #6FA761;
 }
 
 .boxes:nth-child(6) {
-    border-bottom: 3px solid #7411F7;
+    border-bottom: 3px solid #232323;
 }
 
 .boxes:nth-child(7) {
@@ -346,35 +346,27 @@ nav li a:active,
 }
 
 .boxes:nth-child(8) {
-    border-bottom: 3px solid #71A962;
+    border-bottom: 3px solid #777BB3;
 }
 
 .boxes:nth-child(9) {
-    border-bottom: 3px solid black;
-}
-
-.boxes:nth-child(10) {
-    border-bottom: 3px solid #10AA50;
-}
-
-.boxes:nth-child(11) {
-    border-bottom: 3px solid #880000;
-}
-
-.boxes:nth-child(12) {
-    border-bottom: 3px solid #4AA6F0;
-}
-
-.boxes:nth-child(13) {
     border-bottom: 3px solid #F05033;
 }
 
-.boxes:nth-child(14) {
+.boxes:nth-child(10) {
     border-bottom: 3px solid #000000;
 }
 
-.boxes:nth-child(15) {
+.boxes:nth-child(11) {
+    border-bottom: 3px solid #2688CE;
+}
+
+.boxes:nth-child(12) {
     border-bottom: 3px solid #21759B;
+}
+
+.boxes:nth-child(13) {
+    border-bottom: 3px solid #00A600;
 }
 
 .boxes img {
