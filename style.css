@@ -2,10 +2,7 @@
 
 :root {
     font-size: 16px;
-    /* --prim-clr: #062eff; */
-    /* before */
     --prim-clr: #1e42ff;
-    /* --nav-clr: #f9f9f9; */
     --nav-clr: #FFF6F6;
     --half-white: #FFFFEC;
     --selection-clr: #ff6161;
@@ -112,7 +109,6 @@ nav li a:active,
 .resp-nav li a:active {
     color: var(--prim-clr);
 }
-
 
 .resp-head {
     display: none;
@@ -247,7 +243,6 @@ nav li a:active,
 }
 
 
-
 /* ---------------------- About Us ---------------------- */
 
 .about {
@@ -334,38 +329,42 @@ nav li a:active,
 }
 
 .boxes:nth-child(5) {
-    border-bottom: 3px solid #6FA761;
+    border-bottom: 3px solid #0773B4;
 }
 
 .boxes:nth-child(6) {
-    border-bottom: 3px solid #232323;
+    border-bottom: 3px solid #6FA761;
 }
 
 .boxes:nth-child(7) {
-    border-bottom: 3px solid #07B6D5;
+    border-bottom: 3px solid #232323;
 }
 
 .boxes:nth-child(8) {
-    border-bottom: 3px solid #777BB3;
+    border-bottom: 3px solid #07B6D5;
 }
 
 .boxes:nth-child(9) {
-    border-bottom: 3px solid #F05033;
+    border-bottom: 3px solid #777BB3;
 }
 
 .boxes:nth-child(10) {
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid #F05033;
 }
 
 .boxes:nth-child(11) {
-    border-bottom: 3px solid #2688CE;
+    border-bottom: 3px solid #000000;
 }
 
 .boxes:nth-child(12) {
-    border-bottom: 3px solid #21759B;
+    border-bottom: 3px solid #1ea1ff;
 }
 
 .boxes:nth-child(13) {
+    border-bottom: 3px solid #21759B;
+}
+
+.boxes:nth-child(14) {
     border-bottom: 3px solid #00A600;
 }
 
@@ -430,7 +429,6 @@ footer {
 }
 
 
-
 /* ---------------------- Scroll to Top Button ---------------------- */
 
 .to-top {
@@ -456,17 +454,11 @@ footer {
     cursor: pointer;
 }
 
-
 .active {
     opacity: 1;
     bottom: 3rem;
     pointer-events: auto;
 }
-
-
-
-
-
 
 
 
@@ -549,7 +541,6 @@ footer {
         width: 4.5rem;
     }
 }
-
 
 
 /* ~~~~~~~~~~~~~~~~~ large level mobile devices ~~~~~~~~~~~~~~~~~ */
@@ -648,7 +639,6 @@ footer {
 }
 
 
-
 /* ~~~~~~~~~~~~~~~~~ medium level mobile devices ~~~~~~~~~~~~~~~~~ */
 
 @media only screen and (min-width: 426px)and (max-width: 595px) {
@@ -668,7 +658,6 @@ footer {
         display: none;
         row-gap: 2rem;
     }
-
 
     .heroSection {
         padding: 0rem 1rem;
@@ -748,7 +737,6 @@ footer {
 }
 
 
-
 /* ~~~~~~~~~~~~~~~~~ small level mobile devices ~~~~~~~~~~~~~~~~~ */
 
 @media only screen and (min-width: 321px) and (max-width: 425px) {
@@ -782,7 +770,6 @@ footer {
         height: 2.5rem;
         font-size: 1.5rem;
     }
-
 
     .heroSection {
         padding: 0rem .5rem;
@@ -883,7 +870,6 @@ footer {
 }
 
 
-
 /* ~~~~~~~~~~~~~~~~~ last ~~~~~~~~~~~~~~~~~ */
 
 @media only screen and (max-width: 320px) {
@@ -922,7 +908,6 @@ footer {
     .resp-nav li {
         font-size: 1rem;
     }
-
 
     .heroSection {
         padding: 0rem .5rem;
