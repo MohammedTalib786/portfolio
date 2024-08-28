@@ -1,29 +1,22 @@
-// Scroll To Top Functionality
 const toTop = document.querySelector('.to-top');
-// console.log(toTop)
-window.addEventListener('scroll', () => {
-    // console.log(window.pageYOffset);
-    if (window.pageYOffset > 100) {
-        toTop.classList.add('active');
-    }
-    else {
-        toTop.classList.remove('active');
-    }
-})
-
-toTop.addEventListener('click', (e) => {
-    e.preventDefault()
-    window.scrollTo(0, 0);
-})
-
-
-// Responsive Navbar Functionality
 let respHead = document.querySelector('.resp-head');
 let toggleBtn = document.querySelector('.toggleBtn');
 let respNav = document.querySelector('.resp-nav');
 let faSolid = document.querySelector('.fa-solid');
+let hiddenElem = document.querySelectorAll('.hidden');
+let date = new Date();
+let year = date.getFullYear();
 
-// console.log(respHead, toggleBtn, respNav)
+
+// >>>>>>>>>>>>>>>>>>> Scroll To Top Functionality
+window.addEventListener('scroll', () => window.pageYOffset > 100 ? toTop.classList.add('active') : toTop.classList.remove('active'))
+toTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+})
+
+
+// >>>>>>>>>>>>>>>>>>> Responsive Navbar Functionality
 toggleBtn.addEventListener('click', (e) => {
     e.preventDefault()
     if (respNav.style.display != 'flex') {
@@ -39,7 +32,15 @@ toggleBtn.addEventListener('click', (e) => {
 })
 
 
-// Get Current Year
-let date = new Date();
-let year = date.getFullYear();
+// >>>>>>>>>>>>>>>>>>> Get Current Year
 document.getElementById('getYear').innerHTML = year;
+
+
+// >>>>>>>>>>>>>>>>>>> Scroll Animation
+let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show')
+    })
+})
+
+hiddenElem.forEach((elem) => observer.observe(elem))

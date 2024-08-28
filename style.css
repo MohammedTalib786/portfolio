@@ -18,7 +18,6 @@
     scroll-behavior: smooth;
 }
 
-
 ::selection {
     background-color: var(--selection-clr);
     color: var(--white-clr);
@@ -29,7 +28,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 4.5px;
 }
 
 /* Track */
@@ -49,7 +48,12 @@
 }
 
 
-/* ---------------------- .Header---------------------- */
+/* ---------------------- Header---------------------- */
+
+header {
+    background-color: var(--nav-clr);
+    width: 100%;
+}
 
 .header {
     z-index: 999;
@@ -57,14 +61,27 @@
 
 .header,
 .resp-head {
+    animation: 2s linear 0s 1 headerFade;
     padding: 0rem 5rem;
+    max-width: 1440px;
+    margin: auto;
     width: 100%;
     height: 6rem;
-    background-color: var(--nav-clr);
+    /* background-color: var(--nav-clr); */
     /* background-color: red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@keyframes headerFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .header h1,
@@ -143,27 +160,30 @@ nav li a:active,
     color: var(--white-clr);
     border: 0;
     outline: 0;
+    cursor: pointer;
 }
 
 
 /* ---------------------- Hero Section ---------------------- */
-
 .heroSection {
+    max-width: 1440px;
+    margin: auto;
     width: 100%;
-    height: 34rem;
+    /* height: 34rem; */
+    height: 90vh;
     /* background-color: gray; */
     padding: 0rem 5rem;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .left {
     width: 50%;
-    height: 32rem;
+    /* height: 34vh; */
     /* background-color: yellow; */
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
     row-gap: 1.4rem;
@@ -238,21 +258,27 @@ nav li a:active,
 
 .h2Head {
     font-family: Outfit;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
 }
 
 
 /* ---------------------- About Us ---------------------- */
+.about-cont {
+    width: 100%;
+    background-color: var(--half-white);
+    /* background-color: aqua; */
+}
 
 .about {
-    background-color: var(--half-white);
-    /* background-color: magenta; */
+    max-width: 1440px;
+    margin: auto;
+    /* background-color: yellow; */
     display: flex;
-    row-gap: 6rem;
+    row-gap: 3rem;
     align-items: center;
     flex-direction: column;
-    padding: 3.2rem 5rem;
+    padding: 4rem 5rem;
 }
 
 .aboutText {
@@ -272,14 +298,16 @@ nav li a:active,
 
 
 /* ---------------------- Skills ---------------------- */
-
 .skills {
+    /* background-color: #00A600; */
+    max-width: 1440px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 3rem 5rem;
-    background: var(--white-clr);
+    padding: 4rem 5rem;
+    /* background: var(--white-clr); */
 }
 
 .boxContainer {
@@ -295,14 +323,14 @@ nav li a:active,
 
 .boxes {
     width: 30%;
-    height: 10rem;
+    padding: 1.2rem 0;
     background-color: var(--white-clr);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     row-gap: 0.3rem;
-    border-radius: 16px;
+    border-radius: 12px;
     /* border-bottom: 3px solid #5959ff; */
     box-shadow: 1px 1px 18px 0px #949494;
     transition: transform .4s;
@@ -349,23 +377,35 @@ nav li a:active,
 }
 
 .boxes:nth-child(10) {
-    border-bottom: 3px solid #F05033;
+    border-bottom: 3px solid #e5920d;
 }
 
 .boxes:nth-child(11) {
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid #f05033;
 }
 
 .boxes:nth-child(12) {
-    border-bottom: 3px solid #1ea1ff;
+    border-bottom: 3px solid #000000;
 }
 
 .boxes:nth-child(13) {
-    border-bottom: 3px solid #21759B;
+    border-bottom: 3px solid #2EA0F2;
 }
 
 .boxes:nth-child(14) {
-    border-bottom: 3px solid #00A600;
+    border-bottom: 3px solid #2D3039;
+}
+
+.boxes:nth-child(15) {
+    border-bottom: 3px solid #21759B;
+}
+
+.boxes:nth-child(16) {
+    border-bottom: 3px solid #5E8F3E;
+}
+
+.boxes:nth-child(17) {
+    border-bottom: 3px solid #F90000;
 }
 
 .boxes img {
@@ -381,14 +421,21 @@ nav li a:active,
 
 
 /* ---------------------- Footer ---------------------- */
+.footer-cont {
+    width: 100%;
+    background-color: var(--nav-clr);
+}
 
 footer {
+    max-width: 1440px;
+    margin: auto;
+    padding: 2rem 5rem;
     width: 100%;
-    height: 6rem;
-    background-color: var(--nav-clr);
+    /* height: 6rem; */
+    /* background-color: var(--nav-clr); */
     /* background-color: rgb(255, 96, 96); */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -432,8 +479,8 @@ footer {
 /* ---------------------- Scroll to Top Button ---------------------- */
 
 .to-top {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     border: 0;
     outline: 0;
     /* background-color: magenta; */
@@ -444,7 +491,7 @@ footer {
     bottom: 0rem;
     right: 3rem;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -493,11 +540,23 @@ footer {
     } */
 
     .header {
-        padding: 0rem 3rem;
+        padding: 0rem 2rem;
+    }
+
+    .header nav {
+        column-gap: 4rem;
+    }
+
+    .left {
+        width: 60%;
+    }
+
+    .right {
+        width: 40%;
     }
 
     .heroSection {
-        padding: 0rem 3rem;
+        padding: 0rem 2rem;
     }
 
     .name {
@@ -522,11 +581,11 @@ footer {
 
     .about {
         row-gap: 4rem;
-        padding: 3.2rem 3rem;
+        padding: 3.2rem 2rem;
     }
 
     .skills {
-        padding: 3rem 3rem;
+        padding: 3rem 2rem;
     }
 
     .boxContainer {
@@ -534,14 +593,36 @@ footer {
     }
 
     .boxes {
-        height: 8rem;
+        padding: 1.2rem 0;
     }
 
     .boxes img {
         width: 4.5rem;
     }
+
+    footer {
+        padding: 2rem 2rem;
+    }
 }
 
+
+@media (min-width: 596px) and (max-width: 768px) {
+    .copyrights span {
+        font-size: .8rem;
+    }
+
+    .footerLogo h2 {
+        font-size: 1.5rem;
+    }
+
+    .socials i {
+        font-size: 1.3rem;
+    }
+
+    .socials i:not(i:first-child) {
+        margin-left: 1.8rem;
+    }
+}
 
 /* ~~~~~~~~~~~~~~~~~ large level mobile devices ~~~~~~~~~~~~~~~~~ */
 
@@ -564,11 +645,11 @@ footer {
 
     .heroSection {
         padding: 0rem 2rem;
-        height: 28rem;
+        height: 90vh;
     }
 
     .left {
-        height: 28rem;
+        height: 24vh;
     }
 
     .name {
@@ -588,11 +669,11 @@ footer {
     }
 
     .right {
-        height: 28rem;
+        height: 40vh;
     }
 
     .right img {
-        width: 15rem;
+        width: 90%;
     }
 
     .h2Head {
@@ -614,7 +695,7 @@ footer {
 
     .boxes {
         width: 43%;
-        height: 8rem;
+        padding: 1.2rem 0;
     }
 
     .boxes img {
@@ -652,6 +733,7 @@ footer {
 
     .resp-head {
         display: flex;
+        height: 6rem;
     }
 
     .resp-nav {
@@ -660,15 +742,15 @@ footer {
     }
 
     .heroSection {
-        padding: 0rem 1rem;
-        height: 34rem;
+        padding: 0rem 1.3rem;
+        min-height: 90vh;
         flex-direction: column-reverse;
         align-items: center;
     }
 
     .left {
         width: 80%;
-        height: 34rem;
+        height: 20vh;
         align-items: center;
     }
 
@@ -691,12 +773,12 @@ footer {
 
     .right {
         width: 80%;
-        height: 34rem;
+        height: 50vh;
         justify-content: center;
     }
 
     .right img {
-        width: 15rem;
+        width: 90%;
     }
 
     .h2Head {
@@ -705,7 +787,7 @@ footer {
 
     .about {
         row-gap: 4rem;
-        padding: 3.2rem 2rem;
+        padding: 3.2rem 1.3rem;
     }
 
     .aboutText {
@@ -714,7 +796,7 @@ footer {
     }
 
     .skills {
-        padding: 3rem 1rem;
+        padding: 3rem 1.3rem;
     }
 
     .boxContainer {
@@ -723,7 +805,7 @@ footer {
 
     .boxes {
         width: 43%;
-        height: 7rem;
+        padding: 1.2rem 0;
     }
 
     .boxes img {
@@ -731,8 +813,16 @@ footer {
     }
 
     footer {
-        height: 14rem;
+        /* height: 14rem; */
+        padding: 2rem 1.3rem;
+        gap: 1.5rem;
         flex-direction: column;
+    }
+
+    .to-top {
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1rem;
     }
 }
 
@@ -750,6 +840,8 @@ footer {
 
     .resp-head {
         display: flex;
+        height: 6rem;
+
     }
 
     .resp-nav {
@@ -769,19 +861,21 @@ footer {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 1.5rem;
+        cursor: pointer;
     }
 
     .heroSection {
-        padding: 0rem .5rem;
-        height: 34rem;
+        padding: 3rem 1.3rem;
+        min-height: 90vh;
         flex-direction: column-reverse;
         align-items: center;
     }
 
     .left {
-        width: 80%;
-        height: 34rem;
+        width: 100%;
+        height: 20vh;
         align-items: center;
+        row-gap: 0rem;
     }
 
     .name {
@@ -806,13 +900,14 @@ footer {
     }
 
     .right {
-        width: 80%;
-        height: 34rem;
+        width: 100%;
+        height: 50vh;
+
         justify-content: center;
     }
 
     .right img {
-        width: 13rem;
+        width: 92%;
     }
 
     .h2Head {
@@ -820,8 +915,8 @@ footer {
     }
 
     .about {
-        row-gap: 4rem;
-        padding: 3.2rem 1.5rem;
+        row-gap: 1.5rem;
+        padding: 3.2rem 1.3rem;
     }
 
     .aboutText {
@@ -830,7 +925,7 @@ footer {
     }
 
     .skills {
-        padding: 3rem .5rem;
+        padding: 3rem 1.3rem;
     }
 
     .boxContainer {
@@ -838,8 +933,8 @@ footer {
     }
 
     .boxes {
-        width: 65%;
-        height: 6rem;
+        width: 80%;
+        padding: 1.2rem 0;
     }
 
     .boxes img {
@@ -851,7 +946,8 @@ footer {
     }
 
     footer {
-        height: 14rem;
+        padding: 2rem 1.3rem;
+        gap: 1.5rem;
         flex-direction: column;
     }
 
@@ -867,12 +963,18 @@ footer {
     .socials i {
         font-size: 1.3rem;
     }
+
+    .to-top {
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1rem;
+    }
 }
 
 
 /* ~~~~~~~~~~~~~~~~~ last ~~~~~~~~~~~~~~~~~ */
 
-@media only screen and (max-width: 320px) {
+@media (max-width: 320px) {
     /* body {
         background-color: blueviolet;
     } */
@@ -883,6 +985,7 @@ footer {
 
     .resp-head {
         display: flex;
+        height: 6rem;
     }
 
     .head-sec {
@@ -910,16 +1013,15 @@ footer {
     }
 
     .heroSection {
-        padding: 0rem .5rem;
-        height: 22rem;
-        height: 34rem;
+        padding: 3rem 1.3rem;
+        min-height: 90vh;
         flex-direction: column-reverse;
         align-items: center;
     }
 
     .left {
-        width: 80%;
-        height: 34rem;
+        width: 100%;
+        height: 20vh;
         align-items: center;
     }
 
@@ -945,13 +1047,13 @@ footer {
     }
 
     .right {
-        width: 80%;
-        height: 34rem;
+        width: 100%;
+        height: 40vh;
         justify-content: center;
     }
 
     .right img {
-        width: 13rem;
+        width: 92%;
     }
 
     .h2Head {
@@ -960,7 +1062,7 @@ footer {
 
     .about {
         row-gap: 4rem;
-        padding: 3.2rem 1.5rem;
+        padding: 3.2rem 1.3rem;
     }
 
     .aboutText {
@@ -969,7 +1071,7 @@ footer {
     }
 
     .skills {
-        padding: 3rem .5rem;
+        padding: 3rem 1.3rem;
     }
 
     .boxContainer {
@@ -977,8 +1079,8 @@ footer {
     }
 
     .boxes {
-        width: 65%;
-        height: 6rem;
+        width: 80%;
+        padding: 1.2rem 0;
     }
 
     .boxes img {
@@ -990,7 +1092,8 @@ footer {
     }
 
     footer {
-        height: 14rem;
+        padding: 2rem 1.3rem;
+        gap: 1.5rem;
         flex-direction: column;
     }
 
@@ -1006,4 +1109,27 @@ footer {
     .socials i {
         font-size: 1.3rem;
     }
+
+    .to-top {
+        width: 2.3rem;
+        height: 2.3rem;
+        font-size: 1rem;
+    }
+}
+
+
+/*  >>>>>>>>>>>>>>> Scroll Animation  */
+.hidden {
+    opacity: 0;
+    transition: all .8s linear;
+    pointer-events: none;
+    position: relative;
+    top: 80px;
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    top: 0;
 }
