@@ -38,7 +38,9 @@ document.getElementById('getYear').innerHTML = year;
 
 // >>>>>>>>>>>>>>>>>>> Scroll Animation
 let observer = new IntersectionObserver(entries => {
+    // console.log('entries', entries)
     entries.forEach(entry => {
+        // console.log('entry', entry)
         if (entry.isIntersecting) entry.target.classList.add('show')
     })
 })

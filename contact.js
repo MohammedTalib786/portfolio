@@ -68,4 +68,4 @@ btn.addEventListener('click', (e) => {
 
 })
 
-console.log(emailjs)
+// console.log(emailjs)
