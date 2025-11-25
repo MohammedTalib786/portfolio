@@ -10,6 +10,12 @@
     <title>Mohammed Talib - Portfolio</title>
     <link rel="icon" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <!-- >>>>>>>>>>>>> Link LENIS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+
 </head>
 
 <body>
@@ -17,11 +23,13 @@
     <!-- ---------------------- >>>>>>>>>>>>>>>>>>>>>>>>>>>> Header ---------------------- -->
     <header>
         <div class="header">
-            <h1><a href="index.html">PORTFOLIO</a></h1>
+            <h1><a href="/">PORTFOLIO</a></h1>
             <nav>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -29,13 +37,15 @@
     <!-- ---------------------- >>>>>>>>>>>>>>>>>>>>>>>>>>>> Mobile Header ---------------------- -->
     <header class="resp-head">
         <div class="head-sec">
-            <h1><a href="index.html">PORTFOLIO</a></h1>
+            <h1><a href="/">PORTFOLIO</a></h1>
             <button class="toggleBtn"><i class="fa-solid fa-bars"></i></button>
         </div>
         <nav class="resp-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <ul>
+                <li><a href="/" class="active" >Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -49,6 +59,7 @@
                 <a href="https://www.facebook.com/profile.php?id=100068373972288"><i
                         class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/_talib__shaikh/"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/STalib01786"> <i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/shaikh-mohammed-talib-b45275222/"> <i
                         class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/MohammedTalib786"><i class="fa-brands fa-github"></i></a>
@@ -59,7 +70,9 @@
             </div>
         </div>
         <div class="right ">
-            <img src="assets/selfImage.jpg" alt="Self Image">
+            <!-- <img src="assets/selfImage.jpg" alt="Self Image"> -->
+            <!-- <img src="assets/talib_photo.png" alt="Self Image"> -->
+            <img src="assets/talib_photo_grey_bg.png" alt="Self Image">
         </div>
     </section>
 
@@ -69,10 +82,13 @@
         <div class="about">
             <h2 class="h2Head">About Me</h2>
             <div class="aboutText">
-                <p>Hey There,</p>
-                <p>
-                    My name is Shaikh Mohammed Talib. I am a 21-year-old Web Developer residing in Kurla, Mumbai. I specialize in developing and maintaining websites by leveraging both no-code tools like WordPress, Elementor, and Shopify, and code-based solutions using HTML, CSS, JavaScript, and React. Responsible for maintaining and enhancing WooCommerce site functionality, focusing on optimized layout for improved user experience. I possess a strong understanding of modern web technologies and a proven ability to deliver solutions that align with user requirements and business objectives.
-                </p>
+                <!-- <p>Hey There,</p> -->
+                <p>My name is Shaikh Mohammed Talib. I am a 22 year old Web Developer residing in Kurla, Mumbai. I
+                    specialize in developing and maintaining websites by leveraging both no-code tools like WordPress,
+                    Elementor, and Shopify, and code-based solutions using HTML, CSS, JavaScript, and React. Responsible
+                    for maintaining and enhancing WooCommerce site functionality, focusing on optimized layout for
+                    improved user experience. I possess a strong understanding of modern web technologies and a proven
+                    ability to deliver solutions that align with user requirements and business objectives.</p>
             </div>
         </div>
     </section>
@@ -179,12 +195,13 @@
                 <span>&copy; <span id="getYear"></span> Shaikh Mohammed Talib</span>
             </div>
             <div class="footerLogo">
-                <h2><a href="index.html">PORTFOLIO</a></h2>
+                <h2><a href="/">PORTFOLIO</a></h2>
             </div>
             <div class="socials">
                 <a href="https://www.facebook.com/profile.php?id=100068373972288"><i
                         class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/_talib__shaikh/"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/STalib01786"> <i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.linkedin.com/in/shaikh-mohammed-talib-b45275222/"> <i
                         class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/MohammedTalib786"><i class="fa-brands fa-github"></i></a>
@@ -198,6 +215,11 @@
         <i class="fa-solid fa-chevron-up"></i>
     </button>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- >>>>>>>>>>>>> Script LENIS -->
+    <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
 
     <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>> JavaScript File -->
     <script src="script.js"></script>

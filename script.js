@@ -18,16 +18,18 @@ toTop.addEventListener('click', (e) => {
 
 // >>>>>>>>>>>>>>>>>>> Responsive Navbar Functionality
 toggleBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    if (respNav.style.display != 'flex') {
-        respHead.style.height = '20rem';
-        respNav.style.display = 'flex'
-        faSolid.classList.add('fa-xmark');
+    e.preventDefault();
+    if (faSolid.classList.contains('fa-bars')) {
+        faSolid.classList.remove('fa-bars')
+        faSolid.classList.add('fa-xmark')
+        respNav.style.opacity = '1'
+        respNav.style.marginTop = '0px'
     }
     else {
-        faSolid.classList.remove('fa-xmark');
-        respHead.style.height = '9rem';
-        respNav.style.display = 'none'
+        faSolid.classList.remove('fa-xmark')
+        faSolid.classList.add('fa-bars')
+        respNav.style.opacity = '0'
+        respNav.style.marginTop = '-150px'
     }
 })
 
@@ -45,4 +47,140 @@ let observer = new IntersectionObserver(entries => {
     })
 })
 
-hiddenElem.forEach((elem) => observer.observe(elem))
+hiddenElem.forEach((elem) => observer.observe(elem));
+
+
+let projSecTxtCont = document.querySelectorAll('.projSect .blocks .text_content')
+if (projSecTxtCont) {
+
+    projSecTxtCont.forEach(elem => {
+        let paraTxt = Array.from(elem.querySelectorAll('p'))
+        let readMoreBtns = Array.from(elem.querySelectorAll('.read_more_btn'))
+
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                paraTxt.forEach(para => {
+                    console.log('para', para)
+                    console.log('para check class', para.classList.contains('extendedHeight'))
+                    para.classList.toggle('extendedHeight')
+                    if (para.classList.contains('extendedHeight')) {
+                        btn.innerHTML = 'Read less <i class="fa-solid fa-chevron-up"></i>';
+                        btn.style.color = '#1e42ff'
+                    }
+                    else {
+                        btn.innerHTML = 'Read more <i class="fa-solid fa-chevron-down"></i>'
+                        btn.style.color = 'black'
+                    }
+                })
+
+            })
+        })
+        // readMoreBtn.addEventListener('click', (e) => {
+
+        // })
+        // console.log('paraTxt', paraTxt)
+        // console.log(readMoreBtns)
+    })
+
+
+
+
+
+}
+
+// >>>>>>>>>>>>>>>>>>> Initialize LENIS
+
+// console.log('Additional Script JS Connected!')
+
+// // Initialize Lenis
+// const lenis = new Lenis({
+//     // lerp: 0.1,
+//     duration: 2.5,
+//     autoRaf: true,
+//     anchors: true,
+//     // infinite: true,
+// });
+
+// // Listen for the scroll event and log the event data
+// lenis.on('scroll', (e) => {
+// //   console.log(e);
+// });
+
+// // Use requestAnimationFrame to continuously update the scroll
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
+
+// requestAnimationFrame(raf);
+
+
+
+
+// Initialize Lenis
+// const lenis = new Lenis({
+//   autoRaf: true,
+// });
+
+// // Listen for the scroll event and log the event data
+// lenis.on('scroll', (e) => {
+//   console.log(e);
+// });
+
+// // Use requestAnimationFrame to continuously update the scroll
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
+
+// requestAnimationFrame(raf);
+
+
+
+// >>>>>>>>>>>>>>>>>>> ENDS Initialize LENIS
+
+
+
+
+
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>> Initialize LENIS
+
+console.log('Additional Script JS Connected!')
+
+// Initialize Lenis
+const lenis = new Lenis({
+    // lerp: 0.1,
+    duration: 2.5,
+    autoRaf: true,
+    anchors: true,
+    // infinite: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+    //   console.log(e);
+});
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// >>>>>>>>>>>>>>>>>>> ENDS Initialize LENIS
+
+
+
+console.log('Fancybox', Fancybox)
+Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+});

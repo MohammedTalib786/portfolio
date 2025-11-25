@@ -4,11 +4,14 @@
     font-size: 16px;
     --prim-clr: #1e42ff;
     --nav-clr: #FFF6F6;
-    --half-white: #FFFFEC;
+    /* --half-white: #FFFFEC; */
+    --half-white: #f5f5f5;
     --selection-clr: #ff6161;
     --grey-clr: grey;
     --black-clr: black;
     --white-clr: white;
+    --font-primary: 'Outfit';
+    --font-secondary: 'Poppins';
 }
 
 * {
@@ -28,7 +31,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 4.5px;
+    width: 4px;
 }
 
 /* Track */
@@ -96,7 +99,7 @@ header {
     color: var(--prim-clr);
 }
 
-.header nav {
+.header nav ul {
     display: flex;
     column-gap: 6rem;
     /* background-color: cyan; */
@@ -106,8 +109,8 @@ nav li,
 .resp-nav li {
     list-style: none;
     font-size: 1.2rem;
-    font-family: 'Open Sans';
-    font-weight: 600;
+    font-family: var(--font-secondary);
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -115,40 +118,59 @@ nav li a,
 .resp-nav li a {
     color: var(--black-clr);
     text-decoration: none;
+    transition: all .35s ease-in-out;
+}
+
+nav li a.active {
+    color: var(--prim-clr);
 }
 
 nav li a:hover,
 .resp-nav li a:hover {
     color: var(--prim-clr);
+    transition: all .35s ease-in-out;
 }
 
-nav li a:active,
-.resp-nav li a:active {
+nav li a.active,
+.resp-nav li a.active {
     color: var(--prim-clr);
 }
 
 .resp-head {
+    /* display: flex; */
     display: none;
-    padding: 0;
-    height: 9rem;
+    /* padding: 40px 15px; */
+    padding: 0px 15px 40px;
+    height: auto;
     flex-direction: column;
     justify-content: space-evenly;
     transition: all .4s;
+    gap: 25px 0;
 }
 
 .head-sec {
     width: 80%;
     display: flex;
+    padding: 40px 0 0;
     justify-content: space-around;
     align-items: center;
-    /* background: blue; */
+    background-color: var(--nav-clr);
+    position: relative;
+    z-index: 999;
+}
+
+
+.resp-nav,
+.resp-nav * {
+    transition: all .45s ease-in-out;
 }
 
 .resp-nav {
     display: flex;
-    /* background-color: cyan; */
     flex-direction: column;
     transition: all .4s;
+    margin-top: -150px;
+    opacity: 0;
 }
 
 .toggleBtn {
@@ -226,10 +248,10 @@ nav li a:active,
     outline: none;
     border: none;
     border-radius: 12px;
-    font-family: open sans;
+    font-family: var(--font-secondary);
     font-size: 1.01rem;
     background-color: var(--prim-clr);
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     transition: border-radius .6s;
 }
@@ -253,11 +275,12 @@ nav li a:active,
 }
 
 .right img {
-    width: 29rem;
+    width: 25rem;
 }
 
 .h2Head {
-    font-family: Outfit;
+    font-family: var(--font-primary);
+    font-weight: 500;
     font-size: 2.5rem;
     text-transform: uppercase;
 }
@@ -275,25 +298,23 @@ nav li a:active,
     margin: auto;
     /* background-color: yellow; */
     display: flex;
-    row-gap: 3rem;
+    row-gap: 1.5rem;
     align-items: center;
     flex-direction: column;
     padding: 4rem 5rem;
 }
 
 .aboutText {
-    font-family: 'Open Sans';
-    font-weight: 600;
-    line-height: 2.6rem;
+    font-family: var(--font-secondary);
+    font-weight: 400;
     font-size: 1.23rem;
+    line-height: 2rem;
 }
 
-.aboutText p:first-child {
+
+.aboutText p {
     text-align: center;
-}
 
-.aboutText p:last-child {
-    text-align: justify;
 }
 
 
@@ -324,16 +345,17 @@ nav li a:active,
 .boxes {
     width: 30%;
     padding: 1.2rem 0;
-    background-color: var(--white-clr);
+    /* background-color: var(--white-clr); */
+    background-color: var(--half-white);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 0.3rem;
+    row-gap: 10px;
     border-radius: 12px;
     /* border-bottom: 3px solid #5959ff; */
-    box-shadow: 1px 1px 18px 0px #949494;
-    transition: transform .4s;
+    box-shadow: 0px 2px 12px 0px #94949440;
+    transition: all .4s ease-in-out;
 }
 
 .boxes:hover {
@@ -413,9 +435,9 @@ nav li a:active,
 }
 
 .boxes span {
-    font-family: 'Open Sans';
+    font-family: var(--font-secondary);
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 400;
     cursor: context-menu;
 }
 
@@ -440,7 +462,7 @@ footer {
 }
 
 .copyrights span {
-    font-family: 'open sans';
+    font-family: var(--font-secondary);
     font-size: 1rem;
 }
 
@@ -468,7 +490,7 @@ footer {
 }
 
 .socials a:not(a:first-child) {
-    margin-left: 2.7rem;
+    margin-left: 2rem;
 }
 
 .socials a:hover {
@@ -479,8 +501,8 @@ footer {
 /* ---------------------- Scroll to Top Button ---------------------- */
 
 .to-top {
-    width: 3rem;
-    height: 3rem;
+    width: 55px;
+    height: 55px;
     border: 0;
     outline: 0;
     /* background-color: magenta; */
@@ -488,22 +510,22 @@ footer {
     color: var(--white-clr);
     z-index: 999;
     position: fixed;
-    bottom: 0rem;
-    right: 3rem;
+    bottom: 0px;
+    right: 35px;
     border-radius: 50%;
-    font-size: 1.8rem;
+    font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: none;
     opacity: 0;
-    transition: all .6s;
+    transition: all .6s ease-in-out;
     cursor: pointer;
 }
 
 .active {
     opacity: 1;
-    bottom: 3rem;
+    bottom: 50px;
     pointer-events: auto;
 }
 
@@ -543,7 +565,7 @@ footer {
         padding: 0rem 2rem;
     }
 
-    .header nav {
+    .header nav ul {
         column-gap: 4rem;
     }
 
@@ -639,7 +661,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    .header nav {
+    .header nav ul {
         column-gap: 3rem;
     }
 
@@ -669,7 +691,7 @@ footer {
     }
 
     .right {
-        height: 40vh;
+        height: auto;
     }
 
     .right img {
@@ -733,12 +755,14 @@ footer {
 
     .resp-head {
         display: flex;
-        height: 6rem;
+        height: auto;
+        padding: 0px 15px 25px;
     }
 
-    .resp-nav {
-        display: none;
-        row-gap: 2rem;
+    .resp-nav ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
 
     .heroSection {
@@ -746,12 +770,14 @@ footer {
         min-height: 90vh;
         flex-direction: column-reverse;
         align-items: center;
+        gap: 40px;
     }
 
     .left {
         width: 80%;
-        height: 20vh;
+        height: auto;
         align-items: center;
+        row-gap: 12px;
     }
 
     .name {
@@ -773,12 +799,12 @@ footer {
 
     .right {
         width: 80%;
-        height: 50vh;
+        height: auto;
         justify-content: center;
     }
 
     .right img {
-        width: 90%;
+        width: 78%;
     }
 
     .h2Head {
@@ -820,9 +846,9 @@ footer {
     }
 
     .to-top {
-        width: 2.3rem;
-        height: 2.3rem;
-        font-size: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }
 
@@ -840,17 +866,19 @@ footer {
 
     .resp-head {
         display: flex;
-        height: 6rem;
-
+        height: auto;
+        padding: 0px 15px 25px;
     }
 
-    .resp-nav {
-        display: none;
-        row-gap: 2rem;
+    .resp-nav ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
 
     .head-sec {
         width: 80%;
+        padding: 25px 0 0;
     }
 
     .head-sec h1 {
@@ -865,25 +893,26 @@ footer {
     }
 
     .heroSection {
-        padding: 3rem 1.3rem;
+        padding: 0 1.3rem;
         min-height: 90vh;
         flex-direction: column-reverse;
         align-items: center;
+        gap: 40px;
     }
 
     .left {
         width: 100%;
-        height: 20vh;
+        height: auto;
         align-items: center;
-        row-gap: 0rem;
+        row-gap: 12px;
     }
 
     .name {
-        font-size: 1.15rem;
+        font-size: 1.3rem;
     }
 
     .role {
-        font-size: 1.05rem;
+        font-size: 1.25rem;
     }
 
     .icons i {
@@ -896,22 +925,21 @@ footer {
 
     .downloadBtn {
         padding: 0.6rem 1.1rem;
-        font-size: .6rem;
+        font-size: .85rem;
     }
 
     .right {
         width: 100%;
-        height: 50vh;
-
+        height: auto;
         justify-content: center;
     }
 
     .right img {
-        width: 92%;
+        width: 78%;
     }
 
     .h2Head {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .about {
@@ -929,7 +957,7 @@ footer {
     }
 
     .boxContainer {
-        gap: 1.1rem;
+        gap: 1.5rem;
     }
 
     .boxes {
@@ -965,9 +993,9 @@ footer {
     }
 
     .to-top {
-        width: 2.3rem;
-        height: 2.3rem;
-        font-size: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }
 
@@ -985,11 +1013,13 @@ footer {
 
     .resp-head {
         display: flex;
-        height: 6rem;
+        height: auto;
+        padding: 0px 15px 25px;
     }
 
     .head-sec {
         width: 90%;
+        padding: 25px 0 0;
     }
 
     .head-sec h1 {
@@ -1003,9 +1033,10 @@ footer {
         border-radius: 6px;
     }
 
-    .resp-nav {
-        display: none;
-        row-gap: 2rem;
+    .resp-nav ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
 
     .resp-nav li {
@@ -1013,24 +1044,26 @@ footer {
     }
 
     .heroSection {
-        padding: 3rem 1.3rem;
+        padding: 0 1.3rem;
         min-height: 90vh;
         flex-direction: column-reverse;
         align-items: center;
+        gap: 40px;
     }
 
     .left {
         width: 100%;
-        height: 20vh;
+        height: auto;
         align-items: center;
+        row-gap: 12px;
     }
 
     .name {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .role {
-        font-size: .8rem;
+        font-size: 1.25rem;
     }
 
     .icons i {
@@ -1043,21 +1076,21 @@ footer {
 
     .downloadBtn {
         padding: 0.6rem 1.1rem;
-        font-size: .6rem;
+        font-size: .85rem;
     }
 
     .right {
         width: 100%;
-        height: 40vh;
+        height: auto;
         justify-content: center;
     }
 
     .right img {
-        width: 92%;
+        width: 78%;
     }
 
     .h2Head {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .about {
@@ -1075,7 +1108,7 @@ footer {
     }
 
     .boxContainer {
-        gap: 1.1rem;
+        gap: 1.5rem;
     }
 
     .boxes {
@@ -1111,9 +1144,9 @@ footer {
     }
 
     .to-top {
-        width: 2.3rem;
-        height: 2.3rem;
-        font-size: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
 }
 
@@ -1133,3 +1166,29 @@ footer {
     position: relative;
     top: 0;
 }
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>> LENIS Rec CSS */
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>> ENDS LENIS Rec CSS */
