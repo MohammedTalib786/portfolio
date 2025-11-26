@@ -11,7 +11,7 @@ let [name, email, phone, msg] = inpArray;
 
 name.addEventListener('input', (e) => {
     e.target.value = e.target.value.replace(/[0-9!@#$%^&*(),.?":{}|<>_\-\/\\\[\]`~+=;']/g, "");
-    if (e.target.value.length > 20) e.target.value = e.target.value.slice(0, 20)
+    if (e.target.value.length > 25) e.target.value = e.target.value.slice(0, 25)
 })
 
 phone.addEventListener('input', (e) => {
@@ -21,12 +21,12 @@ phone.addEventListener('input', (e) => {
 
 
 btn.addEventListener('click', async (e) => {
-    e.preventDefault()
-    // <span class="loader"></span>
+    e.preventDefault();
     if (name.value.length <= 0) {
         msgName.innerHTML = '* Name Field can not be Empty';
         return false;
     }
+
     if (name.value.length >= 0) msgName.innerHTML = '';
 
     if (email.value.length <= 0) {
@@ -47,28 +47,18 @@ btn.addEventListener('click', async (e) => {
     }
 
     else {
-
-
         let templateParams = {
             from_name: name.value,
             from_email: email.value,
             from_phone: phone.value,
-            message: !msg.value ? 'no message' : msg.value
+            message: !msg.value ? 'No Message Found!' : msg.value
         };
-        // console.log(templateParams.from_name, 'tempParam')
         let serviceID = 'service_1aegxhe';
         let templateID = 'template_57q2vpn';
-        // await emailjs.send(serviceID, templateID, templateParams).then(
-        //     response => console.log('SUCCESS!', response.status, response.text),
-        //     error => console.log('FAILED...', error),
-        // )
 
         btn.setAttribute('disabled', true)
         btn.innerHTML = " <span class='loader'></span>"
         await emailjs.send(serviceID, templateID, templateParams)
-
-
-
 
         btn.removeAttribute('disabled')
         btn.innerHTML = "SUBMIT"
@@ -78,50 +68,7 @@ btn.addEventListener('click', async (e) => {
         errorMsgArray.map(elem => elem.style.display = 'none');
         inpArray.map(elem => elem.value = '');
 
-        // let time = 3000;
         setTimeout(() => succesmsg.style.display = 'none', 2000)
-        // setTimeout(() => succesmsg.innerHTML = '', time)
-        // setTimeout(() => window.location.reload(), time * 1.5)
         return true;
     }
-
-
-
-
-    // else {
-    //     console.log('got this', this)
-    //     console.log('btn', btn)
-    // }
-
-
-
-
-
-    // else {
-    //     succesmsg.innerHTML = 'Form submitted succesfully';
-
-    //     let templateParams = {
-    //         from_name: name.value,
-    //         from_email: email.value,
-    //         from_phone: phone.value,
-    //         message: !msg.value ? 'no message' : msg.value
-    //     };
-    //     // console.log(templateParams.from_name, 'tempParam')
-    //     let serviceID = 'service_1aegxhe';
-    //     let templateID = 'template_57q2vpn';
-    //     emailjs.send(serviceID, templateID, templateParams).then(
-    //         response => console.log('SUCCESS!', response.status, response.text),
-    //         error => console.log('FAILED...', error),
-    //     )
-
-    //     errorMsgArray.map(elem => elem.style.display = 'none');
-    //     inpArray.map(elem => elem.value = '');
-
-    //     let time = 3000;
-    //     setTimeout(() => succesmsg.innerHTML = '', time)
-    //     setTimeout(() => window.location.reload(), time * 1.5)
-    //     return true;
-    // }
 })
-
-// console.log(emailjs)

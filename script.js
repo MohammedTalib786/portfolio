@@ -6,7 +6,7 @@ let faSolid = document.querySelector('.fa-solid');
 let hiddenElem = document.querySelectorAll('.hidden');
 let date = new Date();
 let year = date.getFullYear();
-
+let projSecTxtCont = document.querySelectorAll('.projSect .blocks .text_content')
 
 // >>>>>>>>>>>>>>>>>>> Scroll To Top Functionality
 window.addEventListener('scroll', () => window.pageYOffset > 100 ? toTop.classList.add('active') : toTop.classList.remove('active'))
@@ -50,9 +50,8 @@ let observer = new IntersectionObserver(entries => {
 hiddenElem.forEach((elem) => observer.observe(elem));
 
 
-let projSecTxtCont = document.querySelectorAll('.projSect .blocks .text_content')
-if (projSecTxtCont) {
 
+if (projSecTxtCont) {
     projSecTxtCont.forEach(elem => {
         let paraTxt = Array.from(elem.querySelectorAll('p'))
         let readMoreBtns = Array.from(elem.querySelectorAll('.read_more_btn'))
@@ -61,8 +60,6 @@ if (projSecTxtCont) {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 paraTxt.forEach(para => {
-                    console.log('para', para)
-                    console.log('para check class', para.classList.contains('extendedHeight'))
                     para.classList.toggle('extendedHeight')
                     if (para.classList.contains('extendedHeight')) {
                         btn.innerHTML = 'Read less <i class="fa-solid fa-chevron-up"></i>';
@@ -73,94 +70,19 @@ if (projSecTxtCont) {
                         btn.style.color = 'black'
                     }
                 })
-
             })
         })
-        // readMoreBtn.addEventListener('click', (e) => {
-
-        // })
-        // console.log('paraTxt', paraTxt)
-        // console.log(readMoreBtns)
     })
-
-
-
-
-
 }
 
-// >>>>>>>>>>>>>>>>>>> Initialize LENIS
-
-// console.log('Additional Script JS Connected!')
-
-// // Initialize Lenis
-// const lenis = new Lenis({
-//     // lerp: 0.1,
-//     duration: 2.5,
-//     autoRaf: true,
-//     anchors: true,
-//     // infinite: true,
-// });
-
-// // Listen for the scroll event and log the event data
-// lenis.on('scroll', (e) => {
-// //   console.log(e);
-// });
-
-// // Use requestAnimationFrame to continuously update the scroll
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-
-// requestAnimationFrame(raf);
-
-
-
-
-// Initialize Lenis
-// const lenis = new Lenis({
-//   autoRaf: true,
-// });
-
-// // Listen for the scroll event and log the event data
-// lenis.on('scroll', (e) => {
-//   console.log(e);
-// });
-
-// // Use requestAnimationFrame to continuously update the scroll
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
-
-// requestAnimationFrame(raf);
-
-
-
-// >>>>>>>>>>>>>>>>>>> ENDS Initialize LENIS
-
-
-
-
-
-
-
-
-
 
 
 // >>>>>>>>>>>>>>>>>>> Initialize LENIS
-
-console.log('Additional Script JS Connected!')
-
 // Initialize Lenis
 const lenis = new Lenis({
-    // lerp: 0.1,
     duration: 2.5,
     autoRaf: true,
     anchors: true,
-    // infinite: true,
 });
 
 // Listen for the scroll event and log the event data
@@ -175,12 +97,10 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
-
 // >>>>>>>>>>>>>>>>>>> ENDS Initialize LENIS
 
 
-
-console.log('Fancybox', Fancybox)
+// >>>>>>>>>>>>>>>>>>> Initialize Fancybox Lib
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
 });
