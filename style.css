@@ -441,6 +441,13 @@ nav li a.active,
     cursor: context-menu;
 }
 
+/* ---------------------- Project Section ---------------------- */
+#code_unavailable {
+    cursor: pointer;
+}
+
+/* ---------------------- ENDS Project Section ---------------------- */
+
 
 /* ---------------------- Footer ---------------------- */
 .footer-cont {

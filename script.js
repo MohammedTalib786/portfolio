@@ -73,30 +73,28 @@ if (projSecTxtCont) {
             })
         })
     })
+
+    let code_unavailable = Array.from(document.querySelectorAll('#code_unavailable'));
+    code_unavailable.forEach(elem => {
+        elem.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("Sorry! Code preview is not Available for this project")
+        })
+    })
 }
 
 
 
 // >>>>>>>>>>>>>>>>>>> Initialize LENIS
 // Initialize Lenis
+
 const lenis = new Lenis({
-    duration: 2.5,
+    lerp: 0.05,
+    // duration: 2.5,
     autoRaf: true,
     anchors: true,
 });
 
-// Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-    //   console.log(e);
-});
-
-// Use requestAnimationFrame to continuously update the scroll
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-
-requestAnimationFrame(raf);
 // >>>>>>>>>>>>>>>>>>> ENDS Initialize LENIS
 
 
@@ -104,3 +102,4 @@ requestAnimationFrame(raf);
 Fancybox.bind("[data-fancybox]", {
     // Your custom options
 });
+
